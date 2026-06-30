@@ -28,34 +28,45 @@
 - [ ] Final bibliography
 
 ---
-
 # Phase 3 – Data Acquisition
+- [x] Download datasets
+- [x] Identify data sources
+- [ ] Additional datasets
 
-## Climate
 
-- [ ] DWD Weather
-- [ ] ERA5
-- [ ] Heatwaves
-- [ ] Drought
+# Phase 4 – Dataset Exploration & Selection
 
-## Hazards
+### Climate datasets
 
-- [x] Flood maps identified
-- [ ] Flood preprocessing
-- [ ] Wildfire
-- [ ] Landslides (optional)
+- [ ] Explore Heat dataset (.nc)
+- [ ] Explore Flood dataset (.nc)
+- [ ] Explore Drought dataset (.nc)
 
-## Socio-economic
 
-- [ ] Population
-- [ ] GDP
-- [ ] Land Use
-- [ ] Infrastructure
+### Socioeconomic datasets
 
----
+- [ ] Explore Population dataset
+- [ ] Explore GDP dataset
+- [ ] Explore Infrastructure dataset
+- [ ] Explore Land Use dataset
 
-# Phase 4 – Data Engineering
+### Banking & Financial datasets
 
+- [ ] Explore Banking Exposure dataset
+- [ ] Explore ESG Indicator dataset
+
+### Dataset assessment
+
+- [ ] Assess variables and metadata
+- [ ] Assess temporal coverage
+- [ ] Assess spatial resolution
+- [ ] Assess missing values
+- [ ] Compare candidate datasets
+- [ ] Create Dataset Assessment Table
+- [ ] Select datasets for the master dataset
+
+
+# Phase 5 – Data Engineering
 - [ ] Standardize CRS
 - [ ] Clean datasets
 - [ ] Aggregate to NUTS-3
@@ -64,7 +75,7 @@
 
 ---
 
-# Phase 5 – Feature Engineering
+# Phase 6 – Feature Engineering
 
 - [ ] Feature selection
 - [ ] Scaling
@@ -73,7 +84,7 @@
 
 ---
 
-# Phase 6 – AI Model
+# Phase 7 – AI Model
 
 - [ ] Build FFNN
 - [ ] Train model
@@ -83,7 +94,7 @@
 
 ---
 
-# Phase 7 – API
+# Phase 8 – API
 
 - [ ] Flask backend
 - [ ] REST endpoints
@@ -92,7 +103,7 @@
 
 ---
 
-# Phase 8 – Frontend
+# Phase 9 – Frontend
 
 - [ ] Dashboard
 - [ ] Region selection
@@ -101,7 +112,7 @@
 
 ---
 
-# Phase 9 – Testing
+# Phase 10 – Testing
 
 - [ ] Unit tests
 - [ ] Integration tests
@@ -109,7 +120,7 @@
 
 ---
 
-# Phase 10 – Documentation
+# Phase 11 – Documentation
 
 - [ ] README
 - [ ] Data Catalog
@@ -118,7 +129,7 @@
 
 ---
 
-# Phase 11 – Deployment
+# Phase 12 – Deployment
 
 - [ ] GitHub complete
 - [ ] Heroku backend
