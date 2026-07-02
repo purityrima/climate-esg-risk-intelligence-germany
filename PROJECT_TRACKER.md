@@ -38,7 +38,7 @@
 
 ### Climate datasets
 
-- [ ] Explore Heat dataset (.nc)
+- [x] Explore Heat dataset (.nc)
 - [ ] Explore Flood dataset (.nc)
 - [ ] Explore Drought dataset (.nc)
 
