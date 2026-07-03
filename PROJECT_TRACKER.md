@@ -40,7 +40,7 @@
 
 - [x] Explore Heat dataset (.nc)
 - [x] Explore Flood dataset (.nc)
-- [ ] Explore Drought dataset (.nc)
+- [x] Explore Drought dataset (.nc)
 
 
 ### Socioeconomic datasets
