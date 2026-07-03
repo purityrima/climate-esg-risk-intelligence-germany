@@ -42,6 +42,34 @@
 - [x] Explore Flood dataset (.nc)
 - [x] Explore Drought dataset (.nc)
 
+| Notebook                                            | Status     | Output                                         | Notes                                   |
+| --------------------------------------------------- | ---------- | ---------------------------------------------- | --------------------------------------- |
+| 01 Climate Dataset Inventory                        | ✅ Complete | Inventory                                      | Initial climate dataset review          |
+| 02 Flood Proxy (Rx5day)                             | ✅ Complete | `rx5day_germany_nuts2_1990_2025.nc`            | Germany subset extracted and documented |
+| 03 Drought Proxy (Meteorological Drought Magnitude) | ✅ Complete | `drought_magnitude_germany_nuts2_1990_2025.nc` | Germany subset extracted and documented |
+| 04 Heat Proxy (Climatological Heatwave Days)        | ✅ Complete | `heatwave_days_germany_nuts2_1990_2025.nc`     | Germany subset extracted and documented |
+
+Current Project Progress
+
+✅ Climate hazard datasets completed:
+• Flood (Rx5day)
+• Drought Magnitude
+• Heatwave Days
+
+Next phase:
+• Exposure datasets
+    □ Population Density
+    □ GDP per Capita
+
+• Vulnerability datasets
+    □ Urbanization Proxy
+    □ Adaptive Capacity Proxy
+
+• Master Dataset Construction
+    □ Merge climate, exposure, and vulnerability datasetsa
+
+
+
 
 ### Socioeconomic datasets
 
