@@ -31,7 +31,7 @@
 # Phase 3 – Data Acquisition
 - [x] Download datasets
 - [x] Identify data sources
-- [ ] Additional datasets
+- [x] Additional datasets
 
 
 # Phase 4 – Dataset Exploration & Selection
@@ -73,7 +73,7 @@ Next phase:
 
 ### Socioeconomic datasets
 
-- [ ] Explore Population dataset
+- [X] Explore Population dataset
 - [ ] Explore GDP dataset
 - [ ] Explore Infrastructure dataset
 - [ ] Explore Land Use dataset

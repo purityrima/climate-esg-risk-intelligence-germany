@@ -1,0 +1,17 @@
+# Climate & ESG Risk Intelligence Germany
+# Python package requirements
+
+pandas
+numpy
+matplotlib
+geopandas
+xarray
+rioxarray
+rasterio
+openpyxl
+jupyter
+notebook
+scikit-learn
+torch
+shap
+flask
