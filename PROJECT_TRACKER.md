@@ -78,7 +78,7 @@ Next phase:
 - [ ] Explore Land Use dataset
 
 ### Vulnerability datasets
-- [ ] Unemployment
+- [x] Unemployment rate
 - [ ] Adaptive Capacity Proxy
 
 ### Banking & Financial datasets
