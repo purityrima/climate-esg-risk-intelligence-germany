@@ -70,13 +70,16 @@ Next phase:
 
 
 
-
 ### Socioeconomic datasets
 
 - [X] Explore Population dataset
-- [ ] Explore GDP dataset
+- [x] Explore GDP dataset
 - [ ] Explore Infrastructure dataset
 - [ ] Explore Land Use dataset
+
+### Vulnerability datasets
+- [ ] Unemployment
+- [ ] Adaptive Capacity Proxy
 
 ### Banking & Financial datasets
 
