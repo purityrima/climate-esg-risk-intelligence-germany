@@ -31,7 +31,7 @@
 # Phase 3 – Data Acquisition
 - [x] Download datasets
 - [x] Identify data sources
-- [x] Additional datasets
+- [x] Additional datasets -NUTS-2 and NUTS-3
 
 
 # Phase 4 – Dataset Exploration & Selection
@@ -41,6 +41,7 @@
 - [x] Explore Heat dataset (.nc)
 - [x] Explore Flood dataset (.nc)
 - [x] Explore Drought dataset (.nc)
+- [x] Validate NUTS-2 → NUTS-3 Spatial Crosswalk (401 districts)
 
 | Notebook                                            | Status     | Output                                         | Notes                                   |
 | --------------------------------------------------- | ---------- | ---------------------------------------------- | --------------------------------------- |
@@ -49,25 +50,37 @@
 | 03 Drought Proxy (Meteorological Drought Magnitude) | ✅ Complete | `drought_magnitude_germany_nuts2_1990_2025.nc` | Germany subset extracted and documented |
 | 04 Heat Proxy (Climatological Heatwave Days)        | ✅ Complete | `heatwave_days_germany_nuts2_1990_2025.nc`     | Germany subset extracted and documented |
 
-Current Project Progress
 
-✅ Climate hazard datasets completed:
-• Flood (Rx5day)
-• Drought Magnitude
-• Heatwave Days
+### Current Project Progress
 
-Next phase:
-• Exposure datasets
-    □ Population Density
-    □ GDP per Capita
+✔ Climate hazard datasets explored and documented:
+- Flood (Rx5day)
+- Drought Magnitude
+- Heatwave Days
 
-• Vulnerability datasets
-    □ Urbanization Proxy
-    □ Adaptive Capacity Proxy
+✔ NUTS-2 → NUTS-3 Spatial Crosswalk constructed
 
-• Master Dataset Construction
-    □ Merge climate, exposure, and vulnerability datasetsa
+✔ Spatial compatibility with INKAR validated
 
+✔ 401 vs. 400 district discrepancy resolved
+
+### Next Phase 
+
+- Immediate Next Phase:
+
+□ Impute Population dataset
+□ Impute GDP dataset
+□ Impute Unemployment dataset
+
+□ Build Administrative Crosswalk (AGS ↔ NUTS-3)
+    • Resolve Eisenach → Wartburgkreis mapping
+
+□ Harmonize climate datasets
+    • Heatwave
+    • Flood (Rx5day)
+    • Drought
+
+□ Build Climate–ESG Master Dataset
 
 
 ### Socioeconomic datasets
@@ -89,21 +102,22 @@ Next phase:
 ### Dataset assessment
 
 - [ ] Assess variables and metadata
-- [ ] Assess temporal coverage
-- [ ] Assess spatial resolution
-- [ ] Assess missing values
-- [ ] Compare candidate datasets
+- [X] Assess temporal coverage
+- [X] Assess spatial resolution
+- [X] Assess missing values
+- [X] Compare candidate datasets
 - [ ] Create Dataset Assessment Table
-- [ ] Select datasets for the master dataset
+- [X] Select datasets for the master dataset
 
 
 # Phase 5 – Data Engineering
-- [ ] Standardize CRS
-- [ ] Clean datasets
-- [ ] Aggregate to NUTS-3
-- [ ] Merge datasets
-- [ ] Create master dataset
-
+[x] Standardize CRS
+[x] Build Spatial Crosswalk
+[x] Validate Spatial Crosswalk
+[ ] Harmonize climate datasets to NUTS-3
+[ ] Build Administrative Crosswalk
+[ ] Merge climate and socio-economic datasets
+[ ] Create Climate–ESG Master Dataset
 ---
 
 # Phase 6 – Feature Engineering
