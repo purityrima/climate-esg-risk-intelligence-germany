@@ -69,7 +69,7 @@
 - Immediate Next Phase:
 
 □ Impute Population dataset
-□ Impute GDP dataset
+☑ Temporally harmonize GDP per Capita dataset (1990-2025)
 ☑ Temporally harmonize Unemployment dataset (1990–2025)
 
 ☐ Build Administrative Crosswalk (AGS ↔ NUTS-3)
@@ -115,6 +115,7 @@
 [x] Build Spatial Crosswalk
 [x] Validate Spatial Crosswalk
 [x] Impute Unemployment dataset (1990–2025)
+[x] Impute GDP per Capita dataset (1990–2025)
 [ ] Harmonize climate datasets to NUTS-3
 [ ] Build Administrative Crosswalk
 [ ] Merge climate and socio-economic datasets
