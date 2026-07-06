@@ -70,17 +70,17 @@
 
 □ Impute Population dataset
 □ Impute GDP dataset
-□ Impute Unemployment dataset
+☑ Temporally harmonize Unemployment dataset (1990–2025)
 
-□ Build Administrative Crosswalk (AGS ↔ NUTS-3)
+☐ Build Administrative Crosswalk (AGS ↔ NUTS-3)
     • Resolve Eisenach → Wartburgkreis mapping
 
-□ Harmonize climate datasets
+☐ Harmonize climate datasets
     • Heatwave
     • Flood (Rx5day)
     • Drought
 
-□ Build Climate–ESG Master Dataset
+☐ Build Climate–ESG Master Dataset
 
 
 ### Socioeconomic datasets
@@ -114,6 +114,7 @@
 [x] Standardize CRS
 [x] Build Spatial Crosswalk
 [x] Validate Spatial Crosswalk
+[x] Impute Unemployment dataset (1990–2025)
 [ ] Harmonize climate datasets to NUTS-3
 [ ] Build Administrative Crosswalk
 [ ] Merge climate and socio-economic datasets
