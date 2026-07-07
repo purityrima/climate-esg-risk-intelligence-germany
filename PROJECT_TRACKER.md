@@ -64,22 +64,18 @@
 
 ✔ 401 vs. 400 district discrepancy resolved
 
-### Next Phase 
+### Completed
+
+☑ Build administrative crosswalk (Project400)
+☑ Build spatial crosswalk (NUTS-2 → Project400)
+☑ Harmonize climate datasets
+    ☑ Heatwave
+    ☑ Flood (Rx5day)
+    ☑ Drought
+
 
 - Immediate Next Phase:
-
-□ Impute Population dataset
-☑ Temporally harmonize GDP per Capita dataset (1990-2025)
-☑ Temporally harmonize Unemployment dataset (1990–2025)
-
-☑ Build Administrative Crosswalk (AGS ↔ NUTS-3)
-    • Resolve Eisenach → Wartburgkreis mapping
-
-☐ Harmonize climate datasets
-    • Heatwave
-    • Flood (Rx5day)
-    • Drought
-
+☐ Merge climate and socio-economic datasets
 ☐ Build Climate–ESG Master Dataset
 
 
@@ -111,15 +107,20 @@
 
 
 # Phase 5 – Data Engineering
-[x] Standardize CRS
-[x] Build Spatial Crosswalk
-[x] Validate Spatial Crosswalk
-[x] Impute Unemployment dataset (1990–2025)
-[x] Impute GDP per Capita dataset (1990–2025)
-[ ] Harmonize climate datasets to NUTS-3
-[x] Build Administrative Crosswalk
-[ ] Merge climate and socio-economic datasets
-[ ] Create Climate–ESG Master Dataset
+☑ Standardize CRS
+☑ Build administrative crosswalk (Project400)
+☑ Build spatial crosswalk (NUTS-2 → Project400)
+☑ Validate spatial crosswalk
+☑ Harmonize Germany climate datasets (1990–2025)
+    ☑ Heatwave
+    ☑ Flood (Rx5day)
+    ☑ Drought
+
+☑ Climate Harmonization Framework Complete
+☑ Prepare and impute socioeconomic datasets
+☐ Harmonize socioeconomic datasets to Project400 (target_nuts3_id)
+⬜ Merge climate and socioeconomic datasets
+⬜ Create Climate-ESG Master Dataset
 ---
 
 # Phase 6 – Feature Engineering
@@ -188,7 +189,9 @@
 ## Milestones
 
 - [x] Milestone 1 – Repository & Project Setup
-- [ ] Milestone 2 – Data Engineering Complete
+- [x] Milestone 2a – Climate Harmonization Complete
+- [ ] Milestone 2b – Socioeconomic Harmonization Complete
+- [ ] Milestone 3 – Master Dataset Ready
 - [ ] Milestone 3 – Master Dataset Ready
 - [ ] Milestone 4 – FFNN Complete
 - [ ] Milestone 5 – Explainability
