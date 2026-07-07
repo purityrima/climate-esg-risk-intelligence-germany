@@ -72,7 +72,7 @@
 ☑ Temporally harmonize GDP per Capita dataset (1990-2025)
 ☑ Temporally harmonize Unemployment dataset (1990–2025)
 
-☐ Build Administrative Crosswalk (AGS ↔ NUTS-3)
+☑ Build Administrative Crosswalk (AGS ↔ NUTS-3)
     • Resolve Eisenach → Wartburgkreis mapping
 
 ☐ Harmonize climate datasets
@@ -117,7 +117,7 @@
 [x] Impute Unemployment dataset (1990–2025)
 [x] Impute GDP per Capita dataset (1990–2025)
 [ ] Harmonize climate datasets to NUTS-3
-[ ] Build Administrative Crosswalk
+[x] Build Administrative Crosswalk
 [ ] Merge climate and socio-economic datasets
 [ ] Create Climate–ESG Master Dataset
 ---
