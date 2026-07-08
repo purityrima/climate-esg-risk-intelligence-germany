@@ -51,6 +51,13 @@
 | 04 Heat Proxy (Climatological Heatwave Days)        | ✅ Complete | `heatwave_days_germany_nuts2_1990_2025.nc`     | Germany subset extracted and documented |
 
 
+| Notebook | Status | Progress | Notes |
+|---|---|---:|---|
+| `08_crosswalks_and_dataset_harmonization.ipynb` | ✅ Completed | 100% | Administrative crosswalk validated; climate datasets harmonized to 400 districts; socioeconomic datasets prepared for 1990–2025; integrated master dataset created with **14,400 observations** and exported to `data/processed/master/`. Crosswalk refinement remains optional future work and does not block model development. |
+
+
+
+
 ### Current Project Progress
 
 ✔ Climate hazard datasets explored and documented:
@@ -72,12 +79,11 @@
     ☑ Heatwave
     ☑ Flood (Rx5day)
     ☑ Drought
-
+☑ Merge climate and socio-economic datasets
+☑ Build Climate–ESG Master Dataset
 
 - Immediate Next Phase:
-☐ Merge climate and socio-economic datasets
-☐ Build Climate–ESG Master Dataset
-
+Master Dataset verification, FFNN model pipeline
 
 ### Socioeconomic datasets
 
@@ -118,9 +124,14 @@
 
 ☑ Climate Harmonization Framework Complete
 ☑ Prepare and impute socioeconomic datasets
-☐ Harmonize socioeconomic datasets to Project400 (target_nuts3_id)
-⬜ Merge climate and socioeconomic datasets
-⬜ Create Climate-ESG Master Dataset
+    - [x] GDP per capita
+    - [x] Unemployment
+    - [x] Population excluded due to incomplete district-level coverage
+- [x] Harmonize socioeconomic datasets to Project400 (`target_nuts3_id`)
+    - [x] GDP per capita
+    - [x] Unemployment
+- [x] Merge climate and socioeconomic datasets
+- [x] Create Climate-ESG Master Dataset
 ---
 
 # Phase 6 – Feature Engineering
@@ -190,8 +201,14 @@
 
 - [x] Milestone 1 – Repository & Project Setup
 - [x] Milestone 2a – Climate Harmonization Complete
-- [ ] Milestone 2b – Socioeconomic Harmonization Complete
-- [ ] Milestone 3 – Master Dataset Ready
+- [x] Milestone 2b – Socioeconomic Harmonization Complete
+  [x] Climate datasets harmonized to project district framework
+  [x] GDP harmonized and imputed (1990–2025)
+  [x] Unemployment harmonized and imputed (1990–2025)
+  [x] Administrative crosswalk developed and validated
+  [x] Integrated master dataset created
+  [x] Master dataset exported to data/processed/master/
+
 - [ ] Milestone 3 – Master Dataset Ready
 - [ ] Milestone 4 – FFNN Complete
 - [ ] Milestone 5 – Explainability
