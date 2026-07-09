@@ -136,20 +136,35 @@ Master Dataset verification, FFNN model pipeline
 
 # Phase 6 – Feature Engineering
 
-- [ ] Feature selection
-- [ ] Scaling
-- [ ] Encoding
-- [ ] Target creation
+- [x] Create complete-case modelling dataset (289 districts)
+- [x] Exploratory data analysis
+- [x] Distribution analysis
+- [x] Correlation analysis
+- [x] Pairwise relationship analysis
+- [x] Outlier assessment
+- [x] Temporal trend analysis
+- [x] Statistical interpretation
+- [x] Define preprocessing strategy based on EDA
 
+- [ ] Construct Regional Climate Risk Score
+- [ ] Evaluate log(x+1) transformation
+- [ ] Apply feature transformations
+- [ ] Train / Validation / Test split
+- [ ] Feature scaling
+
+Notes: 
+400 harmonized districts retained as the reference master dataset.
+289 districts used for FFNN modelling after complete-case filtering to ensure no missing predictor values.
 ---
 
 # Phase 7 – AI Model
 
-- [ ] Build FFNN
+- [ ] Build Feed-Forward Neural Network
 - [ ] Train model
 - [ ] Hyperparameter tuning
-- [ ] Model evaluation
-- [ ] SHAP explainability
+- [ ] Evaluate regression performance
+- [ ] Generate SHAP explanations
+- [ ] Generate Regional Risk Classes
 
 ---
 
@@ -209,9 +224,11 @@ Master Dataset verification, FFNN model pipeline
   [x] Integrated master dataset created
   [x] Master dataset exported to data/processed/master/
 
-- [ ] Milestone 3 – Master Dataset Ready
-- [ ] Milestone 4 – FFNN Complete
-- [ ] Milestone 5 – Explainability
-- [ ] Milestone 6 – API Live
-- [ ] Milestone 7 – Frontend Live
-- [ ] Milestone 8 – Project Complete
+- [x] Milestone 3 - Master Dataset Ready
+- [ ] Milestone 4 - Exploratory Data Analysis Complete
+- [ ] Milestone 5 - Feature Engineering Complete
+- [ ] Milestone 6 - FFNN Complete
+- [ ] Milestone 7 - SHAP Explainability
+- [ ] Milestone 8 - API Live
+- [ ] Milestone 9 - Frontend Live
+- [ ] Milestone 10 - Project Complete
