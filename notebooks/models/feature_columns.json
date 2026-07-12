@@ -1,0 +1,10 @@
+{
+    "feature_columns": [
+        "heatwave",
+        "flood",
+        "drought",
+        "gdp_per_capita",
+        "unemployment_rate"
+    ],
+    "feature_count": 5
+}

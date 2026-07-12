@@ -1,0 +1,28 @@
+{
+    "saved_files": [
+        "models\\feature_columns.json",
+        "models\\final_ffnn_state_dict.pt",
+        "models\\final_ffnn_model.pth",
+        "models\\model_architecture.txt",
+        "models\\target_scaler.joblib",
+        "models\\preprocessing_pipeline.pkl",
+        "models\\hyperparameters.json",
+        "models\\model_configuration.json",
+        "models\\training_history.json",
+        "models\\performance_metrics.json",
+        "models\\model_metadata.json",
+        "models\\test_predictions.csv",
+        "models\\shap\\shap_values.npy",
+        "models\\shap\\shap_input_values.npy",
+        "models\\shap\\shap_background_values.npy",
+        "models\\shap\\shap_explanation_indices.npy",
+        "models\\shap\\shap_metadata.json",
+        "models\\shap\\global_shap_feature_importance.csv",
+        "reports\\figures\\shap\\shap_waterfall_highest_predicted_rcrs.png",
+        "models\\shap\\local_shap_explanation_highest_risk.csv"
+    ],
+    "skipped_or_not_yet_available": [
+        "Feature scaler: no recognised scaler object was found.",
+        "Risk thresholds: not found. Save after Low/Medium/High classes are finalized."
+    ]
+}

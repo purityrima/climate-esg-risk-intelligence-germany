@@ -1,0 +1,16 @@
+{
+    "explainer": "SHAP DeepExplainer",
+    "model_type": "FFNNRegressor",
+    "background_observations": 200,
+    "explained_observations": 200,
+    "number_of_features": 5,
+    "feature_names": [
+        "heatwave",
+        "flood",
+        "drought",
+        "gdp_per_capita",
+        "unemployment_rate"
+    ],
+    "baseline_rcrs_value": 39.661277770996094,
+    "sampling_seed": 42
+}
