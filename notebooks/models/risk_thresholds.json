@@ -1,0 +1,13 @@
+{
+    "target": "Regional Climate Risk Score",
+    "target_abbreviation": "RCRS",
+    "scale": "0\u2013100",
+    "classification_method": "Validated quantile thresholds established during model development",
+    "low_medium_threshold": 31.371762676239015,
+    "medium_high_threshold": 43.38708740234375,
+    "classes": {
+        "Low": "RCRS <= 31.3718",
+        "Medium": "31.3718 < RCRS <= 43.3871",
+        "High": "RCRS > 43.3871"
+    }
+}

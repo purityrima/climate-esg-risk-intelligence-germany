@@ -1,10 +1,11 @@
 {
-    "project": "AI-Powered Regional Climate Risk Intelligence for Banking in Germany",
+    "project_title": "AI-Powered Regional Climate Risk Intelligence for Banking in Germany",
     "model_name": "Final Feed-Forward Neural Network",
     "framework": "PyTorch",
     "model_class": "FFNNRegressor",
     "prediction_target": "Regional Climate Risk Score",
     "prediction_target_abbreviation": "RCRS",
+    "prediction_scale": "0–100",
     "number_of_features": 5,
     "feature_names": [
         "heatwave",
@@ -14,26 +15,31 @@
         "unemployment_rate"
     ],
     "training_observations": 7282,
-    "validation_observations": null,
+    "validation_observations": 1561,
     "test_observations": 1561,
-    "shap_background_observations": 200,
-    "shap_explained_observations": 200,
-    "shap_baseline_rcrs": 39.661277770996094,
+    "data_split": {
+        "training": "70%",
+        "validation": "15%",
+        "test": "15%",
+        "split_method": "Random split with fixed seed"
+    },
+    "analysis_period": {
+        "start_year": 1990,
+        "end_year": 2025,
+        "years": 36
+    },
+    "geographic_scope": "Germany, NUTS-3 district level",
     "performance_metrics": {
         "test_mse": 0.2165970504283905,
         "test_rmse": 0.46539988228231266,
         "test_mae": 0.4042122960090637,
-        "test_r2": 0.9989650845527649,
-        "final_training_mse": 14.832909398767509,
-        "final_training_rmse": 3.8513516327086403,
-        "final_training_mae": 2.8348298295515098,
-        "average_training_mse": 14.832909398767509,
-        "average_training_rmse": 3.8513516327086403,
-        "average_training_mae": 2.8348298295515098,
-        "calculated_test_mse": 0.2165970693721858,
-        "calculated_test_rmse": 0.4653999026344825,
-        "calculated_test_mae": 0.4042123098225236,
-        "calculated_test_r2": 0.9989650784912812
+        "test_r2": 0.9989650845527649
     },
-    "random_seed": 42
+    "explainability_method": "SHAP DeepExplainer",
+    "random_seed": 42,
+    "risk_threshold_artifact": "models/risk_thresholds.json",
+    "risk_threshold_note": "Saved later in the NCRR-G deployment section after validated thresholds are applied.",
+    "shap_background_observations": 200,
+    "shap_explained_observations": 200,
+    "shap_baseline_rcrs": 39.661277770996094
 }

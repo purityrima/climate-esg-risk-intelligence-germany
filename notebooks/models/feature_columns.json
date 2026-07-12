@@ -6,5 +6,6 @@
         "gdp_per_capita",
         "unemployment_rate"
     ],
-    "feature_count": 5
+    "feature_count": 5,
+    "required_order": true
 }
