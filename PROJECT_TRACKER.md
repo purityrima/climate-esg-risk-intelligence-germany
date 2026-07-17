@@ -20,18 +20,20 @@
 
 # Phase 2 – Literature Review
 
-- [ ] Climate risk literature
-- [ ] ESG literature
-- [ ] Neural Networks literature
-- [ ] Explainable AI literature
-- [ ] German regulatory framework
-- [ ] Final bibliography
+- [x] Climate risk literature
+- [x] ESG literature
+- [x] Neural Networks literature
+- [x] Explainable AI literature
+- [x] German regulatory framework
+- [x] Final bibliography
 
 ---
 # Phase 3 – Data Acquisition
 - [x] Download datasets
 - [x] Identify data sources
 - [x] Additional datasets -NUTS-2 and NUTS-3
+- [x] Assess variables and metadata
+- [x] Create Dataset Assessment Table
 
 
 # Phase 4 – Dataset Exploration & Selection
@@ -203,10 +205,11 @@ Project documentation, metadata preparation and final report.
 
 # Phase 11 – Documentation
 
-- [ ] README
-- [ ] Data Catalog
-- [ ] User Guide
-- [ ] Technical Report
+- [x] README
+- [x] Data Catalog
+- [x] Metadata
+- [x] Literature
+- [x] Technical Report
 
 ---
 
@@ -238,10 +241,11 @@ Project documentation, metadata preparation and final report.
 - [x] National Climate Risk Registry (NCRR-G) generated
 - [x] Germany Climate Risk Map generated
 - [x] Model deployment artifacts exported
+- [x] Milestone 8 – Repository Documentation Complete
 
-- [ ] Milestone 8 - API Live
-- [ ] Milestone 9 - Frontend Live
-- [ ] Milestone 10 - Final Documentation & Project Submission
+- [ ] Milestone 9 - API Live
+- [ ] Milestone 10 - Frontend Live
+- [ ] Milestone 11 - Final Documentation & Project Submission
 
 
 ### Summary of Work Completed
@@ -254,14 +258,15 @@ Project documentation, metadata preparation and final report.
 - National Climate Risk Registry for Germany (NCRR-G) generated.
 - Germany Climate Risk Map generated.
 - Model deployment artifacts exported and ready for API Deployment.
+- Repository documentation prepared for reproducible project delivery.
 
-### Latest Update (13 July 2026)
+### Latest Update (17 July 2026)
 
 - Final FFNN pipeline completed successfully.
-- Notebook 09 executes successfully from Restart Kernel → Run All without errors.
+- Notebook 09 executes successfully from start to finish.
 - SHAP explainability completed (global and local).
-- National Climate Risk Registry (NCRR-G) generated.
+- National Climate Risk Registry for Germany (NCRR-G) generated.
 - Germany Climate Risk Map generated.
-- Model deployment artifacts exported.
-- Project metadata structure prepared.
-- Remaining work focuses on documentation, metadata, GitHub cleanup and final project report.
+- Deployment-ready model artefacts exported.
+- Repository documentation completed (README, Metadata, Data Catalog, Literature).
+- Final project report in progress.

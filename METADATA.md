@@ -55,7 +55,7 @@ Can a Feed-Forward Neural Network accurately predict Regional Climate Risk Score
 
 - **Unit of observation:** District-Year
 
-- **Number of observations:** 10,404
+- **Number of observations (modelling dataset): 10,404** 10,404
 
 - **Number of districts:** 289 (complete-case modelling dataset)
 
@@ -101,9 +101,9 @@ Feed-Forward Neural Network (FFNN)
 
 - **Risk classes:** Low, Medium and High climate risk based on validated thresholds
 
-- **National Climate Risk Registry:** District-year registry containing administrative information, predictors, predicted RCRS and climate risk class
+- **National Climate Risk Registry for Germany (NCRR-G):** District-year registry containing administrative information, predictor variables, predicted Regional Climate Risk Scores (RCRS), and assigned climate risk classes.
 
-- **Germany Climate Risk Map:** National NUTS-3 choropleth map displaying the long-term median predicted RCRS (1990–2025)
+- **Germany Climate Risk Map:** National NUTS-3 choropleth map displaying the median predicted Regional Climate Risk Score (1990–2025) for all modelled districts.
 
 - **Saved model and preprocessing artefacts:** Trained FFNN model, preprocessing pipeline, feature scaler, model configuration, SHAP artefacts and deployment metadata
 
@@ -115,7 +115,7 @@ Feed-Forward Neural Network (FFNN)
 
 - **Main notebooks/scripts:** Notebooks 00–09; Notebook 09 contains the complete modelling pipeline
 
-- **Instructions for reproducing results:** Clone the repository, install dependencies from requirements.txt and execute the notebooks sequentially from Notebook 00 to Notebook 09.
+- **Instructions for reproducing results:** Clone the repository, install dependencies from requirements.txt and execute the notebooks sequentially from Notebook 02 to Notebook 09.
 
 - **Known limitations:** The modelling dataset contains 289 complete-case districts. Results represent current-climate conditions (1990–2025) and are intended for research and demonstration purposes.
 
