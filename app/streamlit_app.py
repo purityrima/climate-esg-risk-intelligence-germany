@@ -62,7 +62,7 @@ page = st.sidebar.radio(
         "Overview",
         "Risk Map",
         "District Explorer",
-        "Model Intelligence",
+        "Model Explainability",
         "Sector Applications",
         "Methodology & Limitations",
         "About the Project",
@@ -577,167 +577,90 @@ if page == "District Explorer":
     )
     st.dataframe(district_history.rename(columns=feature_labels), width="stretch", hide_index=True)
 
-if page == "Model Intelligence":
-    hero("Review the FFNN’s predictive performance and the features that shape its Regional Climate Risk Score estimates.")
-    metrics = data["model"]["metrics"]
-    cols = st.columns(3)
-    cols[0].metric("Test R²", f"{metrics['test_r2']:.4f}")
-    cols[1].metric("Test RMSE", f"{metrics['test_rmse']:.3f}")
-    cols[2].metric("Test MAE", f"{metrics['test_mae']:.3f}")
-    left, right = st.columns(2)
-    with left:
-        st.subheader("Actual vs predicted RCRS")
+if page == "Model Explainability":
+    hero("Explore how the five input indicators shape the model’s Regional Climate Risk Score estimates.")
+    st.subheader("Global SHAP feature importance")
 
-        prediction_data = data["predictions"]
+    st.caption(
+        "Relative influence of the five climate and socioeconomic indicators "
+        "on the model’s Regional Climate Risk Score estimates."
+    )
 
-        prediction_points = (
-            alt.Chart(prediction_data)
-            .transform_calculate(
-                prediction_error="datum.predicted_rcrs - datum.actual_rcrs"
-            )
-            .mark_circle(
-                size=55,
-                color="#2F6F8F",
-                opacity=0.65,
-                stroke="white",
-                strokeWidth=0.6,
-            )
-            .encode(
-                x=alt.X(
-                    "actual_rcrs:Q",
-                    title="Actual RCRS",
-                    scale=alt.Scale(domain=[0, 100]),
-                ),
-                y=alt.Y(
-                    "predicted_rcrs:Q",
-                    title="Predicted RCRS",
-                    scale=alt.Scale(domain=[0, 100]),
-                ),
-                tooltip=[
-                    alt.Tooltip(
-                        "actual_rcrs:Q",
-                        title="Actual RCRS",
-                        format=".2f",
-                    ),
-                    alt.Tooltip(
-                        "predicted_rcrs:Q",
-                        title="Predicted RCRS",
-                        format=".2f",
-                    ),
-                    alt.Tooltip(
-                        "prediction_error:Q",
-                        title="Prediction error",
-                        format="+.2f",
-                    ),
-                ],
-            )
-        )
+    shap = data["shap"].copy()
 
-        perfect_agreement = (
-            alt.Chart(
-                pd.DataFrame(
-                    {
-                        "Actual RCRS": [0, 100],
-                        "Predicted RCRS": [0, 100],
-                    }
-                )
-            )
-            .mark_line(
-                color="#74446F",
-                strokeWidth=2,
-                strokeDash=[7, 5],
-            )
-            .encode(
-                x=alt.X(
-                    "Actual RCRS:Q",
-                    scale=alt.Scale(domain=[0, 100]),
-                ),
-                y=alt.Y(
-                    "Predicted RCRS:Q",
-                    scale=alt.Scale(domain=[0, 100]),
-                ),
-            )
-        )
+    value_column = next(
+        (column for column in shap.columns if column != "feature"),
+        shap.columns[-1],
+    )
 
-        performance_chart = (
-            perfect_agreement + prediction_points
-        ).properties(height=330)
+    feature_column = (
+        "feature"
+        if "feature" in shap.columns
+        else shap.columns[0]
+    )
 
-        st.altair_chart(performance_chart, width="stretch")
-    with right:
-        st.subheader("Global SHAP feature importance")
-        shap = data["shap"].copy()
-        value_column = next(
-            (column for column in shap.columns if column != "feature"),
-            shap.columns[-1],
-        )
-        feature_column = (
-            "feature"
-            if "feature" in shap.columns
-            else shap.columns[0]
-        )
+    shap_labels = {
+        "heatwave": "Heatwave days",
+        "flood": "Extreme precipitation (Rx5day)",
+        "drought": "Drought magnitude",
+        "gdp_per_capita": "GDP per capita",
+        "unemployment_rate": "Unemployment rate",
+    }
 
-        shap_labels = {
-            "heatwave": "Heatwave days",
-            "flood": "Extreme precipitation (Rx5day)",
-            "drought": "Drought magnitude",
-            "gdp_per_capita": "GDP per capita",
-            "unemployment_rate": "Unemployment rate",
-        }
-
-        shap["Display feature"] = (
+    shap["Display feature"] = (
+        shap[feature_column]
+        .map(shap_labels)
+        .fillna(
             shap[feature_column]
-            .map(shap_labels)
-            .fillna(
-                shap[feature_column]
-                .str.replace("_", " ", regex=False)
-                .str.title()
-            )
+            .str.replace("_", " ", regex=False)
+            .str.title()
         )
+    )
 
-        shap_chart = (
-            alt.Chart(shap)
-            .mark_bar(
-                color="#f39c12",
-                cornerRadiusEnd=4,
-            )
-            .encode(
-                x=alt.X(
+    shap_chart = (
+        alt.Chart(shap)
+        .mark_bar(
+            color="#f39c12",
+            cornerRadiusEnd=4,
+        )
+        .encode(
+            x=alt.X(
+                f"{value_column}:Q",
+                title="Mean absolute SHAP value",
+            ),
+            y=alt.Y(
+                "Display feature:N",
+                title=None,
+                sort="-x",
+                axis=alt.Axis(labelLimit=220),
+            ),
+            tooltip=[
+                alt.Tooltip(
+                    "Display feature:N",
+                    title="Indicator",
+                ),
+                alt.Tooltip(
                     f"{value_column}:Q",
                     title="Mean absolute SHAP value",
+                    format=".3f",
                 ),
-                y=alt.Y(
-                    "Display feature:N",
-                    title=None,
-                    sort="-x",
-                    axis=alt.Axis(labelLimit=200),
-                ),
-                tooltip=[
-                    alt.Tooltip(
-                        "Display feature:N",
-                        title="Predictor",
-                    ),
-                    alt.Tooltip(
-                        f"{value_column}:Q",
-                        title="Mean absolute SHAP value",
-                        format=".3f",
-                    ),
-                ],
-            )
-            .properties(height=260)
+            ],
         )
+        .properties(height=300)
+    )
 
-        st.altair_chart(
-            shap_chart,
-            width="stretch",
-        )
+    st.altair_chart(
+        shap_chart,
+        width="stretch",
+    )
+
     st.info(
-    "The exceptionally high test R² reflects the project design: the FFNN learns an "
-    "RCRS target constructed directly from the same five input indicators using a "
-    "defined IPCC-informed methodology. It therefore demonstrates very strong "
-    "approximation of the constructed scoring function, rather than independent "
-    "validation against observed climate losses, insurance claims or infrastructure failures."
-)
+        "This chart shows which of the five input indicators most strongly "
+        "influence the model’s approximation of the constructed Regional "
+        "Climate Risk Score. It supports interpretation of the scoring "
+        "workflow and should not be read as independent validation against "
+        "observed climate losses, insurance claims or infrastructure failures."
+    )
 
 if page == "Sector Applications":
     hero(
